@@ -13,13 +13,23 @@ html{
     font-family: 'Inter', sans-serif;
 }
 main{
-    padding: 20px;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     background-image: url('../images/pattern-curve.svg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+}
+.slide{
+    padding-top: 20px;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    place-content: center;
+}
+.slide-card{
+    width: 350px;
+    height: 582px;
 }
 .slide-image-bg{
     width: 100%;
@@ -54,7 +64,7 @@ main{
 .next{
     place-self: center; 
 }
-.slide-info{
+.slide-info_container{
     width: 100%;
     display: grid;
     justify-items: center;
@@ -63,22 +73,82 @@ main{
     width: 50px;
     height: 50px;
 }
-.info-text{
+.slide-info_comment{
     font-size: 2rem;
-    text-align: center;
+    text-align: start;
     margin-top: -20px;
     color: var(--dark-Blue-white);
     font-weight: 300;
-    margin-bottom: 15px;
+    
 }
-.info-name{
+.slide-info_name{
     color: var(--dark-Blue);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
-.info-profession{
-    font-size: 1.8rem;
+.slide-info_profession{
+    font-size: 1.6rem;
     font-weight: 500;
     color: var(--grayish-Blue);
 }
+
+@media screen and (min-width:900px) {
+    .slide{
+        height: 100vh;
+        place-content: center;
+    }
+    .slide-card{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "left right";
+        width: 100%;
+        height: 600px;
+    }
+    .slide-image-bg{
+        grid-area: right;
+        width: 100%;
+        height: 550px;
+        display: grid;
+        place-items: center;
+    }
+    .image-person{
+        width: 450px;
+        height: 450px;
+    }
+    .slide-info{
+        grid-area: left;
+        place-self: center;
+        display: grid;
+     }
+     .slide-info_comment{
+         font-size: 3.2rem;
+         text-align: start;
+         margin-right: -250px;
+         padding-left: 30px;
+         line-height: 3.8rem;
+         font-weight: 300;
+         margin-bottom: 25px;
+     }
+     .slide-info_container{
+         width:80%;
+         justify-self: end;
+     }
+     .image-quotes{
+         width: 100px;
+         height: 100px;
+     }
+     .slide-info_personal{
+         display: grid;
+         margin-left: 30px;
+         justify-self: start;
+         grid-template-columns: 1fr 1fr;
+         gap: 15px;
+     }
+     .slide-info_name{
+         font-size: 1.8rem;
+     }
+     .slide-info_profession{
+         font-size: 1.8rem;
+     }
+ }
