@@ -39,6 +39,8 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    display: grid;
+    justify-items: center;
 }
 .image-person{
     width: 100%;
@@ -54,15 +56,20 @@ main{
     box-shadow: 1px 1px 2px 2px rgb(231, 211, 211);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    position: relative;
     margin-top: -20px;
+    justify-self: center;
 }
-.prev{
-    place-self: center;
+.prev-btn{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
-.next{
-    place-self: center; 
+.next-btn{
+   width: 100%;
+   height: 100%;
+   display: grid;
+   place-items: center;
 }
 .slide-info_container{
     width: 100%;
@@ -75,7 +82,7 @@ main{
 }
 .slide-info_comment{
     font-size: 2rem;
-    text-align: start;
+    text-align: center;
     margin-top: -20px;
     color: var(--dark-Blue-white);
     font-weight: 300;
@@ -86,11 +93,13 @@ main{
     font-size: 1.6rem;
     font-weight: 500;
     margin-bottom: 5px;
+    text-align: center;
 }
 .slide-info_profession{
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--grayish-Blue);
+    text-align: center;
 }
 
 @media screen and (min-width:900px) {
@@ -150,5 +159,34 @@ main{
      }
      .slide-info_profession{
          font-size: 1.8rem;
+     }
+     .controls{
+        width: 95px;
+        height: 45px;
+        justify-self: start;
+        margin-left: 20%;
+        border-radius: 30px;
+     }
+     .prev-btn{
+         width: 100%;
+         height: 100%;
+         display: grid;
+         place-items: center;
+         border-bottom-left-radius: 30px;
+         border-top-left-radius: 30px;
+     }
+     .next-btn{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+     }
+     .prev-btn:hover{
+        background-color: rgb(219, 236, 236);
+     }
+     .next-btn:hover{
+        background-color: rgb(219, 236, 236);
      }
  }
