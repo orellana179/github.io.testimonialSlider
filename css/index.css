@@ -47,7 +47,12 @@ main{
     height: 100%;
     border-radius: 7px;
     box-shadow: 1px 1px 8px 4px rgb(221, 222, 231);
+    display: none;
 }
+.active-img{
+    display: block;
+}
+
 .controls{
     width: 80px;
     height: 40px;
@@ -73,8 +78,11 @@ main{
 }
 .slide-info_container{
     width: 100%;
-    display: grid;
+    display: none;
     justify-items: center;
+}
+.active{
+    display: grid;
 }
 .image-quotes{
     width: 50px;
@@ -101,92 +109,3 @@ main{
     color: var(--grayish-Blue);
     text-align: center;
 }
-
-@media screen and (min-width:900px) {
-    .slide{
-        height: 100vh;
-        place-content: center;
-    }
-    .slide-card{
-        display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-areas: "left right";
-        width: 100%;
-        height: 600px;
-    }
-    .slide-image-bg{
-        grid-area: right;
-        width: 100%;
-        height: 550px;
-        display: grid;
-        place-items: center;
-    }
-    .image-person{
-        width: 450px;
-        height: 450px;
-    }
-    .slide-info{
-        grid-area: left;
-        place-self: center;
-        display: grid;
-     }
-     .slide-info_comment{
-         font-size: 3.2rem;
-         text-align: start;
-         margin-right: -250px;
-         padding-left: 30px;
-         line-height: 3.8rem;
-         font-weight: 300;
-         margin-bottom: 25px;
-     }
-     .slide-info_container{
-         width:80%;
-         justify-self: end;
-     }
-     .image-quotes{
-         width: 100px;
-         height: 100px;
-     }
-     .slide-info_personal{
-         display: grid;
-         margin-left: 30px;
-         justify-self: start;
-         grid-template-columns: 1fr 1fr;
-         gap: 15px;
-     }
-     .slide-info_name{
-         font-size: 1.8rem;
-     }
-     .slide-info_profession{
-         font-size: 1.8rem;
-     }
-     .controls{
-        width: 95px;
-        height: 45px;
-        justify-self: start;
-        margin-left: 20%;
-        border-radius: 30px;
-     }
-     .prev-btn{
-         width: 100%;
-         height: 100%;
-         display: grid;
-         place-items: center;
-         border-bottom-left-radius: 30px;
-         border-top-left-radius: 30px;
-     }
-     .next-btn{
-        width: 100%;
-        height: 100%;
-        display: grid;
-        place-items: center;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-     }
-     .prev-btn:hover{
-        background-color: rgb(219, 236, 236);
-     }
-     .next-btn:hover{
-        background-color: rgb(219, 236, 236);
-     }
- }
